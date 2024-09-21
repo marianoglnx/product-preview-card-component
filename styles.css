@@ -1,0 +1,122 @@
+:root {
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#view {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 90%;
+    max-width: 650px;
+    background-color: var(--White);
+    border-radius: 15px;
+    display: flex;
+}
+
+.card .hero {
+    width: 50%;
+    min-height: 100%;
+    
+}
+
+.card .hero img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+    
+}
+
+.card .card-content {
+    width: 50%;
+    padding: 35px;
+}
+
+.card-content .text p {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--Darkgrayishblue);
+    margin-bottom: 20px;
+}
+
+.card-content .text h1 {
+    color: black;
+    font-family: 'fraunces-bold';
+    margin-bottom: 25px;
+}
+
+.card-content .prices {
+    display: flex;
+    align-items: center;
+}
+
+.card-content .prices .actual-price {
+    font-size: 30px;
+    color: var(--Darkcyan);
+    margin-right: 15px;
+}
+
+.card-content .prices .last-price {
+    color: var(--Darkgrayishblue);
+}
+
+.card-content button {
+    width: 100%;
+    background-color: var(--Darkcyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin-top: 30px;
+    transition: all .2s ease-in-out;
+}
+
+.card-content button img {
+    margin-right: 10px;
+}
+
+.card-content button:hover {
+    background-color: hsl(158deg 81.83% 16.1%);
+}
+
+
+@media (max-width: 750px) {
+
+    .card {
+        display: block;
+    }
+
+    .card .hero {
+        display: block;
+        width: 100%;
+        height: 300px;
+        background-image: url(../images/image-product-mobile.jpg);
+    }
+
+    .card .hero img {display: none;}
+
+    .card .card-content {
+        display: block;
+        width: 100%;
+    }
+
+}
